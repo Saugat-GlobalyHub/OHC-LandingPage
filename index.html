@@ -28,13 +28,42 @@
 
         <!-- Style CSS -->
         <style>
+
+            /* Smooth Scrolling */
             html {
                 scroll-behavior: smooth;
             }
 
+
+            /* Hamburger Menu Switch */
             #check:checked ~ .actionTabs{
                 right: 0;
             }
+
+            /* Form */
+            .activeTab{
+                background: #2563eb;
+                color: white;
+            }
+
+            .activeTab .svgAgent {
+                fill: white;
+            }
+
+            .activeTab .svgAgent1{
+                fill: white;
+            }
+
+            #individual_div{
+                background: white;
+                z-index: 1;
+            }
+
+            #business_div{
+                background: transparent;
+                z-index: -1;
+            }
+            
 
         </style>
 
@@ -60,7 +89,7 @@
                     </a>
 
                     <!-- Link Tabs -->
-                    <ul class="actionTabs flex flex-col lg:flex-row gap-5 items-center lg:justify-center w-full lg:max-w-fit h-screen lg:h-fit fixed lg:relative top-0 -right-full lg:right-0 z-50 bg-white ease-in-out px-5 py-5 lg:py-0 lg:px-0">
+                    <ul class="actionTabs flex flex-col lg:flex-row gap-5 items-center lg:justify-center h-2/4 w-full lg:max-w-fit lg:h-fit fixed lg:relative top-0 -right-full lg:right-0 z-50 bg-white ease-in-out px-5 py-5 lg:py-0 lg:px-0">
 
                         <li class="mt-3 lg:mt-0">
                             <a class="buttonTab mt-9 px-0 lg:px-6 py-3 text-gray-600 font-normal hover:text-gray-900 hover:font-medium"
@@ -127,9 +156,10 @@
             <!-- ============Hero Section============ -->
             <section class="heroSection w-screen px-6 lg:px-20 2xl:px-[250px] mx-auto flex flex-col md:flex-row lg:flex-row mt-40 mb-20 lg:mt-56 lg:mb-24 md:justify-between lg:justify-between gap-10 md:gap-10 lg:gap-0">
 
-                <!-- Hero Content-->
+                <!-- Heading Content-->
                 <div class="content w-full flex flex-col md:w-3/5 lg:w-2/4 lg:mt-16 gap-10">
 
+                    <!-- Heading Left Part-->
                     <div class="heading flex flex-col gap-4 lg:gap-6">
 
                         <h1
@@ -143,199 +173,284 @@
                             from various trusted providers.
                         </p>
 
-                    </div>
-
-                    <!-- Action Btns -->
-                    <!-- <div class="heroAction w-full flex flex-col lg:flex-row gap-4">
-                                
-                                <a href="https://ohcguide.com/agent-enrollment">
-                                    <button class="w-full px-6 py-3 border bg-primary-500 text-white rounded font-semibold hover:shadow-md" type="button" onclick="www.ohcguide.com/agent-enrollment">
-                                        Register Now
-                                    </button>
-                                </a>
-                                
-
-                                <a href="">
-                                    <button class="w-full px-6 py-3 border border-primary-500 bg-white text-primary-500 rounded font-semibold hover:shadow-md" type="button">
-                                        Book a Free Consultation
-                                    </button>
-                                </a>
-                                
-                            </div> -->
+                    </div>                 
 
                 </div>
 
-                <!-- Registration Form -->
+                <!-- Registration Form Right Part -->
                 <div class="registrationForm w-auto md:w-auto lg:w-auto flex flex-col gap-5 items-center">
 
-                    <!-- Indiidual Reg Form -->
-                    <div class="formIndividualContainer w-full flex flex-col gap-10">
+                    <!-- Reg Form -->
+                    <div class="formContainer w-full flex flex-col gap-5">
 
-                        <!-- Form Field -->
-                        <div class="formFields w-full flex flex-col gap-5">
+                        <!-- Agent Type Field -->
+                        <div class="agentType w-full flex flex-col gap-1">
 
-                            <!-- Agent Type Field -->
-                            <div class="agentType w-full flex flex-col gap-1">
+                            <!-- section Heading -->
+                            <h4 class="font-medium">
+                                Agent Type
+                            </h4>
 
-                                <!-- section Heading -->
-                                <h4 class="font-medium">
-                                    Agent Type
-                                </h4>
+                            <!-- Toggle -->
+                            <div class="toggleAgent w-full flex border rounded-[40px] bg-white">
 
-                                <!-- Toggle -->
-                                <div class="toggleAgent w-full flex border rounded-[40px] bg-white">
+                                <!-- Individual -->
+                                <div class="btnToggle activeTab flex flex-row w-1/2 px-9 md:px-16 lg:px-24 py-4 gap-2 rounded-[40px] cursor-pointer" id="flex-item-1">
 
-                                    <!-- Individual -->
-                                    <div
-                                        class="individualToggle flex flex-row w-1/2 bg-blue-600 px-9 md:px-16 lg:px-24 py-4 gap-2 rounded-[40px]">
-
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_13226_163920)">
-                                                <path
-                                                    d="M1.36597 11.5694C1.36597 5.23244 4.02447 2.5166 4.91064 1.61133H19.0894C19.9755 2.5166 22.6341 5.23244 22.6341 11.5694C22.6341 18.8116 15.6516 21.4828 12.1069 22.3881C8.56226 21.4828 1.36597 18.8116 1.36597 11.5694Z"
-                                                    stroke="white" stroke-width="1.5" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                                <path
-                                                    d="M12.0001 13.3415C13.9756 13.3415 15.5771 11.74 15.5771 9.76451C15.5771 7.78899 13.9756 6.1875 12.0001 6.1875C10.0246 6.1875 8.42307 7.78899 8.42307 9.76451C8.42307 11.74 10.0246 13.3415 12.0001 13.3415Z"
-                                                    fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                                <path
-                                                    d="M17.9739 19.8764C15.9505 21.2305 13.6871 21.985 12.1069 22.3885C10.5046 21.9793 8.1563 21.2093 6.06372 19.8195C6.45223 19.2418 6.92568 18.72 7.47245 18.2731C8.75016 17.2287 10.3496 16.6582 11.9998 16.6582C13.6501 16.6582 15.2495 17.2287 16.5272 18.2731C17.0919 18.7345 17.5785 19.2763 17.9739 19.8764Z"
-                                                    fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </g>
-                                            <defs>
-                                                <clipPath id="clip0_13226_163920">
-                                                    <rect width="24" height="24" fill="white" />
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
-
-                                        <p class="font-semibold text-white">
-                                            Individual
-                                        </p>
-                                    </div>
-
-                                    <!-- Business -->
-                                    <div
-                                        class="businessToggle flex flex-row w-1/2 bg-white px-9 md:px-16 lg:px-24 py-4 gap-2 rounded-[40px]">
-
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M19.7143 6.85742H4.28575C2.3922 6.85742 0.857178 8.39244 0.857178 10.286V19.7146C0.857178 21.6082 2.3922 23.1431 4.28575 23.1431H19.7143C21.6079 23.1431 23.1429 21.6082 23.1429 19.7146V10.286C23.1429 8.39244 21.6079 6.85742 19.7143 6.85742Z"
-                                                fill="#EAEFFD" />
-                                            <path
-                                                d="M19.7143 6.85742H4.28575C2.3922 6.85742 0.857178 8.39244 0.857178 10.286V19.7146C0.857178 21.6082 2.3922 23.1431 4.28575 23.1431H19.7143C21.6079 23.1431 23.1429 21.6082 23.1429 19.7146V10.286C23.1429 8.39244 21.6079 6.85742 19.7143 6.85742Z"
-                                                stroke="#2F5BEA" stroke-width="1.71429" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                            <path d="M6.85718 23.1431V6.85742" stroke="#2F5BEA" stroke-width="1.71429"
-                                                stroke-linecap="round" stroke-linejoin="round" />
-                                            <path d="M17.1428 23.1431V6.85742" stroke="#2F5BEA" stroke-width="1.71429"
-                                                stroke-linecap="round" stroke-linejoin="round" />
-                                            <path
-                                                d="M7.71429 6.857C7.71429 5.72036 8.16582 4.63027 8.96955 3.82654C9.77327 3.02281 10.8634 2.57129 12 2.57129C13.1366 2.57129 14.2267 3.02281 15.0305 3.82654C15.8342 4.63027 16.2857 5.72036 16.2857 6.857"
-                                                stroke="#2F5BEA" stroke-width="1.71429" stroke-linecap="round"
-                                                stroke-linejoin="round" />
-                                        </svg>
-
-                                        <p class="font-semibold text-black">
-                                            Business
-                                        </p>
-                                    </div>
-
+                                    <svg class="svgAgent" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_13564_370057)">
+                                        <path d="M1.36597 11.5694C1.36597 5.23244 4.02447 2.5166 4.91064 1.61133H19.0894C19.9755 2.5166 22.6341 5.23244 22.6341 11.5694C22.6341 18.8116 15.6516 21.4828 12.1069 22.3881C8.56226 21.4828 1.36597 18.8116 1.36597 11.5694Z" fill="#EAEFFD" stroke="#2F5BEA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M12.0001 13.3415C13.9756 13.3415 15.5771 11.74 15.5771 9.76451C15.5771 7.78899 13.9756 6.1875 12.0001 6.1875C10.0246 6.1875 8.42307 7.78899 8.42307 9.76451C8.42307 11.74 10.0246 13.3415 12.0001 13.3415Z" fill="white" stroke="#2F5BEA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M17.9739 19.8764C15.9505 21.2305 13.6871 21.985 12.1069 22.3885C10.5046 21.9793 8.1563 21.2093 6.06372 19.8195C6.45223 19.2418 6.92568 18.72 7.47245 18.2731C8.75016 17.2287 10.3496 16.6582 11.9998 16.6582C13.6501 16.6582 15.2495 17.2287 16.5272 18.2731C17.0919 18.7345 17.5785 19.2763 17.9739 19.8764Z" fill="white" stroke="#2F5BEA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_13564_370057">
+                                        <rect width="24" height="24" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                    </svg>
+                                        
+                                    <p class="font-semibold">
+                                        Individual
+                                    </p>
                                 </div>
 
-                            </div>
+                                <!-- Business -->
+                                <div class="btnToggle flex flex-row bg-white px-9 lg:px-24 py-4 gap-2 rounded-[40px] items-center cursor-pointer" id="flex-item-2">
 
-                            <!-- Name Field -->
-                            <div class="nameField flex flex-col lg:flex-row gap-5 w-full">
+                                    <svg class="svgAgent1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.7143 6.85742H4.28575C2.3922 6.85742 0.857178 8.39244 0.857178 10.286V19.7146C0.857178 21.6082 2.3922 23.1431 4.28575 23.1431H19.7143C21.6079 23.1431 23.1429 21.6082 23.1429 19.7146V10.286C23.1429 8.39244 21.6079 6.85742 19.7143 6.85742Z" fill="#EAEFFD"/>
+                                        <path d="M19.7143 6.85742H4.28575C2.3922 6.85742 0.857178 8.39244 0.857178 10.286V19.7146C0.857178 21.6082 2.3922 23.1431 4.28575 23.1431H19.7143C21.6079 23.1431 23.1429 21.6082 23.1429 19.7146V10.286C23.1429 8.39244 21.6079 6.85742 19.7143 6.85742Z" stroke="#2F5BEA" stroke-width="1.71429" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M6.85718 23.1431V6.85742" stroke="#2F5BEA" stroke-width="1.71429" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M17.1428 23.1431V6.85742" stroke="#2F5BEA" stroke-width="1.71429" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M7.71429 6.857C7.71429 5.72036 8.16582 4.63027 8.96955 3.82654C9.77327 3.02281 10.8634 2.57129 12 2.57129C13.1366 2.57129 14.2267 3.02281 15.0305 3.82654C15.8342 4.63027 16.2857 5.72036 16.2857 6.857" stroke="#2F5BEA" stroke-width="1.71429" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>  
 
-                                <!-- First Name -->
-                                <div class="firstName flex flex-col w-full">
-
-                                    <!-- section Heading -->
-                                    <h4 class="font-medium">
-                                        First Name
-                                    </h4>
-
-                                    <input
-                                        class="border border-gray-100 rounded-md h-11 w-full px-2 hover:border-gray-200 focus:outline-blue-300"
-                                        type="text" required>
-
-                                </div>
-
-                                <!-- Last Name -->
-                                <div class="lasttName flex flex-col w-full">
-
-                                    <!-- section Heading -->
-                                    <h4 class="font-medium">
-                                        Last Name
-                                    </h4>
-
-                                    <input
-                                        class="border border-gray-100 rounded-md h-11 w-full px-2 hover:border-gray-200 focus:outline-blue-300"
-                                        type="text" required>
-
-                                </div>
-
-                            </div>
-
-                            <!-- Email Field -->
-                            <div class="emailField flex flex-col lg:flex-row gap-5 w-full">
-
-                                <!-- Email -->
-                                <div class="firstName flex flex-col w-full">
-
-                                    <!-- section Heading -->
-                                    <h4 class="font-medium">
-                                        Email
-                                    </h4>
-
-                                    <input
-                                        class="border border-gray-100 rounded-md h-11 w-full px-2 hover:border-gray-200 focus:outline-blue-300"
-                                        type="email" required>
-
-                                </div>
-
-                            </div>
-
-                            <!-- Number Field -->
-                            <div class="numberField flex flex-col lg:flex-row gap-5 w-full">
-
-                                <!-- Phone Number -->
-                                <div class="firstName flex flex-col w-full">
-
-                                    <!-- section Heading -->
-                                    <h4 class="font-medium">
-                                        Phone Number
-                                    </h4>
-
-                                    <input type="number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required class="border border-gray-100 rounded-md h-11 w-full px-2 hover:border-gray-200 focus:outline-blue-300 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none" 
-                                        />
-
+                                    <p class="font-semibold">
+                                        Business
+                                    </p>
                                 </div>
 
                             </div>
 
                         </div>
 
-                        <!-- Register Button -->
-                        <div class="registerButton">
-                            <a href="https://ohcguide.com/agent-enrollment" class="w-full">
-                                <button
-                                    class="px-6 py-3 border bg-primary-500 text-white rounded text-lg font-semibold hover:shadow-md w-full"
-                                    type="button" onclick="www.ohcguide.com/agent-enrollment">
-                                    Become an Agent
-                                </button>
-                            </a>
+                        <!-- Form Switch -->
+                        <div class="formTabs flex w-full">
+
+                            <!-- Individual -->
+                            <div class="individualForm flex flex-col w-full gap-5" id="individual_div">
+
+                                <!-- Form -->
+                                <form class="flex flex-col w-full gap-5" >
+                                
+                                    <!-- Name Field -->
+                                    <div class="nameField flex flex-col lg:flex-row gap-5 w-full">
+
+                                        <!-- First Name -->
+                                        <div class="firstName flex flex-col w-full">
+
+                                            <!-- section Heading -->
+                                            <label for="text" class="font-medium">
+                                                First Name
+                                            </label>
+
+                                            <input
+                                                class="border border-gray-100 rounded-md h-11 w-full px-2 hover:border-gray-200 focus:outline-blue-300"
+                                                type="text" id="text" required>
+
+                                        </div>
+
+                                        <!-- Last Name -->
+                                        <div class="lastName flex flex-col w-full">
+
+                                            <!-- section Heading -->
+                                            <label for="text" class="font-medium">
+                                                Last Name
+                                            </label>
+
+                                            <input
+                                                class="border border-gray-100 rounded-md h-11 w-full px-2 hover:border-gray-200 focus:outline-blue-300"
+                                                type="text" id="text" required>
+
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Email Field -->
+                                    <div class="emailField flex flex-col lg:flex-row gap-5 w-full">
+
+                                        <!-- Email -->
+                                        <div class="emailAddress flex flex-col w-full">
+
+                                            <!-- section Heading -->
+                                            <label for="username" class="font-medium">
+                                                Email
+                                            </label>
+
+                                            <input
+                                                class="border border-gray-100 rounded-md h-11 w-full px-2 hover:border-gray-200 focus:outline-blue-300"
+                                                type="email" id="username" required>
+
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Number Field -->
+                                    <div class="numberField flex flex-col lg:flex-row gap-5 w-full">
+
+                                        <!-- Phone Number -->
+                                        <div class="phoneNumber flex flex-col w-full">
+
+                                            <!-- section Heading -->
+                                            <label for="number" class="font-medium">
+                                                Phone Number
+                                            </label>
+
+                                            <input type="number" id="number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required class="border border-gray-100 rounded-md h-11 w-full px-2 hover:border-gray-200 focus:outline-blue-300 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none" 
+                                                />
+
+                                        </div>
+
+                                    </div>
+
+                                </form>
+
+                                <!-- Register Button -->
+                                <div class="registerButton w-full">
+                                    <a href="https://ohcguide.com/agent-enrollment" class="w-full">
+                                        <button
+                                            class="px-6 py-3 border bg-primary-500 text-white rounded text-lg font-semibold hover:shadow-md w-full"
+                                            type="button" onclick="www.ohcguide.com/agent-enrollment">
+                                            Become an Agent
+                                        </button>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                            <!-- Business -->
+                            <div class="businessForm flex flex-col w-full gap-5" id="business_div">
+                                
+                                <!-- Form -->
+                                <form class="flex flex-col w-full gap-5">
+
+                                    <!-- Name Field -->
+                                    <div class="nameField flex flex-col lg:flex-row gap-5 w-full">
+
+                                        <!-- First Name -->
+                                        <div class="firstName flex flex-col w-full">
+
+                                        <!-- section Heading -->
+                                        <label for="text" class="font-medium">
+                                            Contact First Name
+                                        </label>
+
+                                        <input
+                                        class="border border-gray-100 rounded-md h-11 w-full px-2 hover:border-gray-200 focus:outline-blue-300"
+                                        type="text" id="text" required>
+
+                                        </div>
+
+                                        <!-- Last Name -->
+                                        <div class="lastName flex flex-col w-full">
+
+                                        <!-- section Heading -->
+                                        <label for="text" class="font-medium">
+                                            Contact Last Name
+                                        </label>
+
+                                        <input
+                                            class="border border-gray-100 rounded-md h-11 w-full px-2 hover:border-gray-200 focus:outline-blue-300"
+                                            type="text" id="text" required>
+
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Business Legal Name -->
+                                    <div class="legalName flex flex-col w-full">
+
+                                        <!-- section Heading -->
+                                        <label for="legalname" class="font-medium">
+                                            Business Legal Name
+                                        </label>
+
+                                        <input
+                                            class="border border-gray-100 rounded-md h-11 w-full px-2 hover:border-gray-200 focus:outline-blue-300"
+                                            type="text" id="legalname" required>
+
+                                    </div>
+
+                                    <!-- Registration Number -->
+                                    <div class="regNumber flex flex-col w-full">
+
+                                        <!-- section Heading -->
+                                        <label for="regnumber" class="font-medium">
+                                            Business Registration Number
+                                        </label>
+
+                                        <input
+                                            class="border border-gray-100 rounded-md h-11 w-full px-2 hover:border-gray-200 focus:outline-blue-300"
+                                            type="text" id="regnumber" required>
+
+                                    </div>
+
+                                    <!-- Email & Number -->
+                                    <div class="emailNumber flex flex-col lg:flex-row gap-5 w-full">
+
+                                        <!-- Email -->
+                                        <div class="emailAddress flex flex-col w-full">
+
+                                            <!-- section Heading -->
+                                            <label for="username" class="font-medium">
+                                                Email
+                                            </label>
+
+                                            <input
+                                                class="border border-gray-100 rounded-md h-11 w-full px-2 hover:border-gray-200 focus:outline-blue-300"
+                                                type="email" id="username" required>
+
+                                        </div>
+
+                                        <!-- Phone Number -->
+                                        <div class="phoneNumber flex flex-col w-full">
+
+                                            <!-- section Heading -->
+                                            <label for="number" class="font-medium">
+                                                Phone Number
+                                            </label>
+
+                                            <input type="number" id="number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required class="border border-gray-100 rounded-md h-11 w-full px-2 hover:border-gray-200 focus:outline-blue-300 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none" 
+                                                />
+
+                                        </div>
+
+                                    </div>
+
+                                </form>
+
+                                <!-- Register Button -->
+                                <div class="registerButton w-full">
+                                    <a href="https://ohcguide.com/agent-enrollment" class="w-full">
+                                        <button
+                                            class="px-6 py-3 border bg-primary-500 text-white rounded text-lg font-semibold hover:shadow-md w-full"
+                                            type="button" onclick="www.ohcguide.com/agent-enrollment">
+                                            Become an Agent
+                                        </button>
+                                    </a>
+                                </div>
+
+                            </div>
+
                         </div>
 
                     </div>
-
+                
+                    <!-- Book Consultation -->
                     <p>
-                        Want to know more? <a href="https://calendly.com/en/"><span class="font-medium text-blue-500">Book a
+                    Want to know more? 
+                        <a href="https://calendly.com/en/"><span class="font-medium text-blue-500">Book a
                                 Free Consultation</span></a>
                     </p>
 
@@ -644,7 +759,7 @@
                                 </h4>
 
                                 <p class="text-gray-700 text-base lg:text-lg h-16">
-                                    Lörem ipsum videns tetrafasm till exosa, med mitaplagt nebugt.
+                                    Multiple Provides provide you with multiple policy options with various benefits.
                                 </p>
 
                             </div>
@@ -662,7 +777,7 @@
                                 </h4>
 
                                 <p class="text-gray-700 text-base lg:text-lg h-16">
-                                    Lörem ipsum videns tetrafasm till exosa, med mitaplagt nebugt.
+                                    All the policy order can be tracked with the current status.
                                 </p>
 
                             </div>
@@ -685,7 +800,7 @@
                                 </h4>
 
                                 <p class="text-gray-700 text-base lg:text-lg h-16">
-                                    Lörem ipsum videns tetrafasm till exosa, med mitaplagt nebugt.
+                                    Provide your clients with the best suitable insurance policy.
                                 </p>
 
                             </div>
@@ -703,7 +818,7 @@
                                 </h4>
 
                                 <p class="text-gray-700 text-base lg:text-lg h-16">
-                                    Lörem ipsum videns tetrafasm till exosa, med mitaplagt nebugt.
+                                    Achieve the commission from your result with help of live tracking.
                                 </p>
 
                             </div>
@@ -718,11 +833,10 @@
 
                                 <h4 class="text-gray-900 font-semibold lg:font-bold text-xl lg:text-2xl h-16">
                                     30 Days Commission & Refund Guarantee
-
                                 </h4>
 
                                 <p class="text-gray-700 text-base lg:text-lg h-16">
-                                    Lörem ipsum videns tetrafasm till exosa, med mitaplagt nebugt.
+                                    Feature providing you to refund the policy if any problem occur.
                                 </p>
 
                             </div>
@@ -1365,14 +1479,14 @@
                     </div>
 
                     <!--Blogs Content-->
-                    <div class="blogsContent w-full flex flex-col md:flex-row gap-10 md:gap-5 justify-between">
+                    <div class="blogsContent w-full flex flex-col md:flex-row gap-10 md:gap-0 lg:gap-0 justify-between">
 
                         <!--Blog 1-->
                         <div class="blog md:w-1/2 lg:w-1/3 flex flex-col gap-4">
 
                             <!--Image-->
                             <div class="blogImage">
-                                <img src="./src/images/Blogs/blog1.png" alt="">
+                                <img class="flex object-fill" src="./src/images/Blogs/blog1.png" alt="">
                             </div>
 
                             <!--Description-->
@@ -1579,7 +1693,7 @@
                             <!--Answer-->
                             <div class="max-h-0 overflow-hidden peer-checked:max-h-full">
                                 <p class="text-gray-700 p-2 lg:text-lg">
-                                    OSHC is a health insurance (health cover) to help international students to cover the costs of medical and hospital treatment international students may need when having accidents or illnesses for your duration of staying in Australia.
+                                    OHC Guide is a one-stop insurance aggregator platform for citizens willing to study in Australia to get flexible tailored insurance policies as per their needs and budget.
                                 </p>
                             </div>
 
@@ -1593,7 +1707,7 @@
 
                             <!--Question-->
                             <label class="font-semibold flex text-lg lg:text-xl text-gray-900 my-4 px-2 w-full" for="input2">
-                                What does OSHC cover?
+                                Why to choose OHC Guide?
                             </label>
 
                             <!--Chevron-->
@@ -1606,7 +1720,7 @@
                             <!--Answer-->
                             <div class="max-h-0 overflow-hidden peer-checked:max-h-full">
                                 <p class="text-gray-700 p-2 lg:text-lg">
-                                    Lörem ipsum videns tetrafasm till exosa, med mitaplagt nebugt.
+                                    With your own dedicated agent portal we guide you to match the best policy for your client with an attractive commission on every policy.
                                 </p>
                             </div>
 
@@ -1620,7 +1734,7 @@
 
                             <!--Question-->
                             <label class="font-semibold flex text-lg lg:text-xl text-gray-900 my-4 px-2 w-full" for="input3">
-                                Why do I need Overseas Student Health Cover?
+                                Do agents need registration cost to enroll in OHC Guide?
                             </label>
 
                             <!--Chevron-->
@@ -1633,7 +1747,7 @@
                             <!--Answer-->
                             <div class="max-h-0 overflow-hidden peer-checked:max-h-full">
                                 <p class="text-gray-700 p-2 lg:text-lg">
-                                    Lörem ipsum videns tetrafasm till exosa, med mitaplagt nebugt.
+                                    No, OHC Guide doesn’t take any charges from the agents. All you have to do is SIGN UP and you are ready to use the services.
                                 </p>
                             </div>
 
@@ -1647,7 +1761,7 @@
 
                             <!--Question-->
                             <label class="font-semibold flex text-lg lg:text-xl text-gray-900 my-4 px-2 w-full" for="input4">
-                                How to Recover a Password?
+                                How can I track my commissions from OHC Guide portal?
                             </label>
 
                             <!--Chevron-->
@@ -1660,7 +1774,7 @@
                             <!--Answer-->
                             <div class="max-h-0 overflow-hidden peer-checked:max-h-full">
                                 <p class="text-gray-700 p-2 lg:text-lg">
-                                    Lörem ipsum videns tetrafasm till exosa, med mitaplagt nebugt.
+                                    By accessing your OHC Guide account, you will discover comprehensive information about your commissions, including payable amounts, outstanding balances, refunded sums, and the total transaction sum, conveniently displayed on the main page.
                                 </p>
                             </div>
 
@@ -1674,7 +1788,7 @@
 
                             <!--Question-->
                             <label class="font-semibold flex text-lg lg:text-xl text-gray-900 my-4 px-2 w-full" for="input5">
-                                Will my documents be saved in OHC?
+                                Can any agents rectify the wrong information while making a purchase?
                             </label>
 
                             <!--Chevron-->
@@ -1687,7 +1801,7 @@
                             <!--Answer-->
                             <div class="max-h-0 overflow-hidden peer-checked:max-h-full">
                                 <p class="text-gray-700 p-2 lg:text-lg">
-                                    Lörem ipsum videns tetrafasm till exosa, med mitaplagt nebugt.
+                                    Yes, the agents can directly apply for the amendment through the portal and get back the amended certificates within few minutes.
                                 </p>
                             </div>
 
@@ -1937,6 +2051,9 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
         <script>
+
+            // Owl Carousle            
+
             $(document).ready(function(){
                 $(".owl-carousel").owlCarousel({
                         items: 1,
@@ -1946,6 +2063,34 @@
                         nav: true
                     });
                 });
+
+
+            // Tab Switch
+            const individualBtnTab = document.getElementById("flex-item-1");
+            const businessBtnTab = document.getElementById("flex-item-2");
+            const divIndividualTab = document.getElementById ("individual_div");
+            const divBusinessTab = document.getElementById ("business_div");
+
+            individualBtnTab.addEventListener("click", ()=>{
+                individualBtnTab.classList.add ("activeTab");
+                businessBtnTab.classList.remove ("activeTab");
+                divBusinessTab.style.zIndex = 0;
+                divIndividualTab.style.zIndex = 1;
+                divBusinessTab.style.display = "none";
+                divIndividualTab.style.display = 'flex';
+                divIndividualTab.style.height = "fit-content";
+            })
+
+            businessBtnTab.addEventListener("click", ()=>{
+                businessBtnTab.classList.add ("activeTab");
+                individualBtnTab.classList.remove ("activeTab");
+                divIndividualTab.style.zIndex = 0;
+                divBusinessTab.style.zIndex = 1;
+                divIndividualTab.style.display = 'none';
+                divBusinessTab.style.display = 'flex';
+                divBusinessTab.style.height = 'fit-content';
+            })
+
         </script>
 
     </body>
