@@ -242,7 +242,7 @@
                             <div class="individualForm flex flex-col w-full gap-5" id="individual_div">
 
                                 <!-- Form -->
-                                <form class="flex flex-col w-full gap-5" >
+                                <form class="flex flex-col w-full gap-5" method="post" id="individualForm" action="www.ohcguide.com/agent-enrollment">
                                 
                                     <!-- Name Field -->
                                     <div class="nameField flex flex-col md:flex-row gap-5 w-full">
@@ -321,7 +321,7 @@
                                     <a href="https://ohcguide.com/agent-enrollment" class="w-full">
                                         <button
                                             class="px-6 py-3 border bg-primary-500 text-white rounded text-lg font-semibold hover:shadow-md w-full"
-                                            type="button" onclick="www.ohcguide.com/agent-enrollment">
+                                            type="submit" form="individualForm" value="submit" onclick="www.ohcguide.com/agent-enrollment">
                                             Become an Agent
                                         </button>
                                     </a>
@@ -333,7 +333,7 @@
                             <div class="businessForm hidden flex-col w-full gap-5" id="business_div">
 
                                 <!-- Form -->
-                                <form class="flex flex-col w-full gap-5">
+                                <form class="flex flex-col w-full gap-5" method="post" id="businessForm" action="www.ohcguide.com/agent-enrollment">
 
                                     <!-- Name Field -->
                                     <div class="nameField flex flex-col md:flex-row gap-5 w-full">
@@ -435,7 +435,7 @@
                                     <a href="https://ohcguide.com/agent-enrollment" class="w-full">
                                         <button
                                             class="px-6 py-3 border bg-primary-500 text-white rounded text-lg font-semibold hover:shadow-md w-full"
-                                            type="button" onclick="www.ohcguide.com/agent-enrollment">
+                                            type="submit" form="businessForm" value="submit" onclick="www.ohcguide.com/agent-enrollment">
                                             Become an Agent
                                         </button>
                                     </a>
